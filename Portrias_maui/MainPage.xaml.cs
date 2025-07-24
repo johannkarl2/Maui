@@ -1,4 +1,6 @@
-﻿namespace Portrias_maui
+﻿using System.Threading.Tasks;
+
+namespace Portrias_maui
 {
     public partial class MainPage : ContentPage
     {
@@ -9,16 +11,15 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void LogInClicked(object? sender, EventArgs e)
         {
-            count++;
+            await Navigation.PushAsync(new Setting());
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+        }
+        public async Task OnClicked(object? sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new Setting());
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
 }

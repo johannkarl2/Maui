@@ -6,4 +6,10 @@ public partial class Setting : ContentPage
 	{
 		InitializeComponent();
 	}
+    
+         private async void LogOutClicked(object? sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new MainPage());
+
+    }
 }
