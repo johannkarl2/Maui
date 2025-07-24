@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Portrias_maui.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+
+            <Frame WidthRequest="300"
+                   HeightRequest="450"
+                   BorderColor="Black"
+                   BackgroundColor="Transparent"
+                   HasShadow="False"
+                   Padding="0">
+
+                <StackLayout VerticalOptions="FillAndExpand" Padding="10" Spacing="10">
+
+                    <!-- Label at the top -->
+                    <Label
+                          Text="Log In"
+                          FontAttributes="Bold"
+                          FontSize="Title"
+                          Style="{StaticResource Headline}"
+                          SemanticProperties.HeadingLevel="Level1"
+                          HorizontalOptions="Start" />
+                    <Label
+                            Text="to continue!"
+                            FontSize="Body"
+                            Style="{StaticResource Headline}"
+                            SemanticProperties.HeadingLevel="Level1"
+                            HorizontalOptions="Start" />
+
+                    <BoxView HeightRequest="10" Color="Transparent" />
+
+                    <Label
+                            Text="Username"
+                            FontSize="Caption"
+                            Style="{StaticResource Headline}"
+                            SemanticProperties.HeadingLevel="Level1"
+                            HorizontalOptions="Start" />
+                    <Entry
+                            Placeholder="Username"
+                            Text=""
+                            WidthRequest="250"
+                            HeightRequest="40"
+                            FontSize="16"
+                            Keyboard="Default" />
+                    <Label
+                            Text="Password"
+                            FontSize="Caption"
+                            Style="{StaticResource Headline}"
+                            SemanticProperties.HeadingLevel="Level1"
+                            HorizontalOptions="Start" />
+                    <Entry
+                            Placeholder="Password"
+                            Text=""
+                            WidthRequest="250"
+                            HeightRequest="40"
+                            FontSize="16"
+                            Keyboard="Default" />
+
+                    <!-- Spacer to push button lower -->
+                    <BoxView HeightRequest="5" Color="Transparent" />
+
+                    <!-- Button -->
+                    <Button
+                            x:Name="CounterBtn"
+                            WidthRequest="250"
+                            HeightRequest="50"
+                            BackgroundColor="#C3614F"
+                            Text="Click me"
+                            SemanticProperties.Hint="Counts the number of times you click"
+                            Clicked="OnCounterClicked"
+                            HorizontalOptions="Center" />
+                    <BoxView HeightRequest="5" Color="Transparent" />
+
+                    <BoxView HeightRequest="2" Color="Black" />
+                    <BoxView HeightRequest="5" Color="Transparent" />
+
+                    <Label HorizontalOptions="Center">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Don't have an account? " />
+                                <Span TextDecorations="Underline" Text="Sign Up" TextColor="#C3614F" FontAttributes="Bold" >
+                                    
+                                </Span>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>
+
+                </StackLayout>
+            </Frame>
+
+
+
+           
+            
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
